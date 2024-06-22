@@ -56,7 +56,7 @@ function getData($table, $where = null, $values = null, $json = true)
 
 
 
-
+// fn sert a inserer un element ( data ) dans table 
 function insertData($table, $data, $json = true)
 {
     global $con;
@@ -179,6 +179,7 @@ function checkAuthenticate()
 }
 
 
+// fn pour ecrire message en cas d'erreur
 function   printFailure($message = "none")
 {
     echo     json_encode(array("status" => "failure", "message" => $message));
