@@ -26,6 +26,7 @@ if ($count > 0) {
         "users_phone" => $phone,
         "users_verfiycode" => $verfiycode ,
     );
+    //envoie le code de verification a travers l'email en utilsant la fn creer dans function file
     sendEmail($email , "Verfiy Code Ecommerce" , "Verfiy Code $verfiycode") ; 
     
     //Appel de la fonction pour inserer l user(data) dans la table users

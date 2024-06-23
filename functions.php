@@ -198,9 +198,14 @@ function result($count)
     }
 }
 
+
+// fn pour envoyer un email a travers mail fn
+// to => a qui 
+// title => titre de mail 
+// body => contenu de mail
 function sendEmail($to, $title, $body)
 {
-    $header = "From: support@waelabohamza.com " . "\n" . "CC: waeleagle1243@gmail.com";
+    $header = "From: assil.dkhil28@gmail.com " . "\n" . "CC: assildjerbiano@gmail.com";
     mail($to, $title, $body, $header);
 }
 
