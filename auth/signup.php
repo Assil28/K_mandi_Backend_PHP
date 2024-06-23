@@ -8,7 +8,8 @@ $password = sha1($_POST['password']);
 $email = filterRequest("email");
 $phone = filterRequest("phone");
 $verfiycode     = 0
-//$verfiycode     = rand(10000 , 99999);
+// le code de verification est aleatoire est composé de 5 chiffres et va etre stocker dans l bd avec l user
+$verfiycode     = rand(10000 , 99999);
 
 //verifier si lutilisateur existe ou non a travers email ou phone
 $stmt = $con->prepare("SELECT * FROM users WHERE users_email = ? OR users_phone = ? ");
