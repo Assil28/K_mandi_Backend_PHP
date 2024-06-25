@@ -184,11 +184,15 @@ function   printFailure($message = "none")
 {
     echo     json_encode(array("status" => "failure", "message" => $message));
 }
+
+// fn pour ecire un msg de success
 function   printSuccess($message = "none")
 {
     echo     json_encode(array("status" => "success", "message" => $message));
 }
 
+
+// fn n3adilha l count w hiya ken >0 ta3mel appell l succees fn sinon failure fn 
 function result($count)
 {
     if ($count > 0) {
