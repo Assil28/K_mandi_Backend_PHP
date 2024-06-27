@@ -12,4 +12,5 @@ $stmt->execute() ;
 
 $count = $stmt->rowCount() ; 
 
+// traja3li success ken l code l ketbo s7i7
  result($count) ;
