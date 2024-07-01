@@ -23,6 +23,8 @@ function getAllData($table, $where = null, $values = null, $json = true)
     $stmt->execute($values);
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
     $count  = $stmt->rowCount();
+    
+    //ken json true nhebo yaffichilii l msg w data 
     if ($json == true) {
         if ($count > 0) {
             echo json_encode(array("status" => "success", "data" => $data));
@@ -30,7 +32,9 @@ function getAllData($table, $where = null, $values = null, $json = true)
             echo json_encode(array("status" => "failure"));
         }
         return $count;
-    } else {
+    } 
+    // ken json false nhebo yraja3li data khw
+    else {
         if ($count > 0) {
             return  array("status" => "success", "data" => $data);
         } else {
