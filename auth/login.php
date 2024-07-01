@@ -11,4 +11,5 @@ $count = $stmt->rowCount();
 // 3adit l count lel fn result w keno l count > 0 bch tnedi 3le l succes fn (msg success) sinon faillure fn (msg faillure)
 result($count) ; 
 
+// bch traja3li l user specifique l 3mal login pour le stocké dans shared preference
 getData("users" , "users_email = ? AND  users_password = ?" , array($email , $password)) ; 

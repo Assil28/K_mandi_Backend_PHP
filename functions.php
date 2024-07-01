@@ -11,9 +11,13 @@ function getAllData($table, $where = null, $values = null, $json = true)
 {
     global $con;
     $data = array();
+
+    // cas if where n'est pas null c'est a dire fama confition ale data l nheb alihom
     if ($where == null) {
         $stmt = $con->prepare("SELECT  * FROM $table   ");
-    } else {
+    }
+    // idha me fama hata condition ale data l nheb aalihom nheb l mawjoudin f table koll
+    else {
         $stmt = $con->prepare("SELECT  * FROM $table WHERE   $where ");
     }
     $stmt->execute($values);
@@ -35,6 +39,8 @@ function getAllData($table, $where = null, $values = null, $json = true)
     }
 }
 
+
+// hedhi tjibli une seule ligne de resultat 
 function getData($table, $where = null, $values = null, $json = true)
 {
     global $con;
