@@ -5,6 +5,7 @@ include "../connect.php";
 
 $categoryid = filterRequest("id");
 
+//gett items selon la categorie choisi  
 // getAllData("itemsview", "categories_id = $categoryid");
 
 $userid = filterRequest("usersid");
