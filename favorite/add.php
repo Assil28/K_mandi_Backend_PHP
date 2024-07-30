@@ -12,5 +12,5 @@ $data = array(
     "favorite_itemsid"  =>   $itemsid
 );
 
-
+// add favorite to data base
 insertData("favorite" ,$data) ; 
