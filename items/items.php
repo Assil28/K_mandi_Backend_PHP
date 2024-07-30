@@ -10,8 +10,9 @@ $categoryid = filterRequest("id");
 
 $userid = filterRequest("usersid");
 
-
-
+// gett tous les produits selon l catégorie
+// l fihom 1 hedhouka les produits l ajouté lel favorite
+// l fihom 0 hedhouka les produits l mch ajouté lel favorite
 $stmt = $con->prepare("SELECT items1view.* , 1 as favorite , (items_price - (items_price * items_discount / 100 ))  as itemspricedisount  FROM items1view 
 INNER JOIN favorite ON favorite.favorite_itemsid = items1view.items_id AND favorite.favorite_usersid = $userid
 WHERE categories_id = $categoryid
