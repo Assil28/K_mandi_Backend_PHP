@@ -2,6 +2,8 @@
 
 include "../../connect.php"  ;
 
+// resend verify code to approuve user
+
 $email = filterRequest("email");
 
 $verfiycode     = rand(10000 , 99999);
