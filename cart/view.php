@@ -2,6 +2,8 @@
 
 include "../connect.php";
 
+// afficher la carte ( le prix a payer des articles et le nombre d'article)
+
 $userid = filterRequest("usersid");
 
 $data  = getAllData("cartview", "cart_usersid = $userid", null, false);
