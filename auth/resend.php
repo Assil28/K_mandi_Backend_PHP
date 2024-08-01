@@ -14,6 +14,6 @@ $data = array(
 
 updateData("users" ,  $data  , "users_email = '$email'" ) ; 
 
-sendEmail($email , "Verfiy Code Ecommerce" , "Verfiy Code $verfiycode") ; 
+//sendEmail($email , "Verfiy Code Ecommerce" , "Verfiy Code $verfiycode") ; 
 
  

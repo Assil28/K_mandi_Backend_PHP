@@ -3,6 +3,7 @@
 
 include "../connect.php";
 
+// ajout du produit au panier selon le nombre souhaité
 
 $usersid = filterRequest("usersid");
 $itemsid = filterRequest("itemsid");
@@ -18,7 +19,3 @@ $data = array(
 
 insertData("cart", $data);
  
-
-    // Mysql 
-
-    // PHP 
