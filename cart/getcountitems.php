@@ -1,5 +1,7 @@
 <?php 
 
+
+// le nombre darticle ajouter au panier selon cette produit 
  include "../connect.php" ; 
 
  $usersid = filterRequest("usersid") ; 
