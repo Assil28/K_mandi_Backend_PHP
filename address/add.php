@@ -2,6 +2,9 @@
 
 include '../connect.php';
 
+// ajouter laddress du client pour la laivraison 
+
+
 $table = "address";
 
 $usersid    = filterRequest("usersid");

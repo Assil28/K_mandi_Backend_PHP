@@ -2,6 +2,8 @@
 
 include '../connect.php';
 
+// modifier laddress du client
+
 $table = "address";
 
 $addressid    = filterRequest("addressid"); 
