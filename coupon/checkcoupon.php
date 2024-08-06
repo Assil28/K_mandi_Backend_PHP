@@ -2,6 +2,8 @@
 
 include "../connect.php" ; 
 
+// utiliser pour les reductions sur les prix comme BlackFriday
+
 $couponName = filterRequest("couponname") ; 
 
 $now = date("Y-m-d H:i:s");
