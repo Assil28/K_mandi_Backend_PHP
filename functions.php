@@ -230,12 +230,12 @@ function sendEmail($to, $title, $body)
 function sendGCM($title, $message, $topic, $pageid, $pagename)
 {
 
-
+    //url mte3 l fireBase
     $url = 'https://fcm.googleapis.com/fcm/send';
 
     $fields = array(
-        "to" => '/topics/' . $topic,
-        'priority' => 'high',
+        "to" => '/topics/' . $topic, // l chhkoun bch nab3ath (esem topic)
+        'priority' => 'high', 
         'content_available' => true,
 
         'notification' => array(
@@ -245,6 +245,7 @@ function sendGCM($title, $message, $topic, $pageid, $pagename)
             "sound" => "default"
 
         ),
+        // data najem neb3athhom 3a notification
         'data' => array(
             "pageid" => $pageid,
             "pagename" => $pagename
@@ -255,7 +256,7 @@ function sendGCM($title, $message, $topic, $pageid, $pagename)
 
     $fields = json_encode($fields);
     $headers = array(
-        'Authorization: key=' . "",
+        'Authorization: key=' . "", // f blaset l point nhot L key l nekhdho mel fireBase Cloud Messaging V1
         'Content-Type: application/json'
     );
 

@@ -11,7 +11,7 @@ $couponid = filterRequest("couponid");
 $paymentmethod = filterRequest("paymentmethod");
 $coupondiscount = filterRequest("coupondiscount");
 
-
+// ken l order type == receieve donc me 3andych prix de livraison
 if ($orderstype == "1") {
     $pricedelivery = 0;
 }
@@ -24,6 +24,8 @@ $totalprice = $ordersprice  + $pricedelivery;
 $now = date("Y-m-d H:i:s");
 
 $checkcoupon = getData("coupon", "coupon_id = '$couponid' AND coupon_expiredate > '$now' AND coupon_count > 0  ", null,  false);
+
+//gotlo ken l coupon mawjoud ma3neha bech na3mel discount (totalprice bch na9es meno discount mte3 l coupon)
 if ($checkcoupon  > 0) {
     $totalprice =  $totalprice - $ordersprice * $coupondiscount / 100;
     $stmt = $con->prepare("UPDATE `coupon` SET  `coupon_count`= `coupon_count` - 1  WHERE coupon_id = '$couponid' ");
