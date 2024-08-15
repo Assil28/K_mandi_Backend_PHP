@@ -273,12 +273,13 @@ function sendGCM($title, $message, $topic, $pageid, $pagename)
 }
 
 
-
+// enregistrer les notifications dans la BD 
 function insertNotify($title, $body, $userid, $topic, $pageid, $pagename)
 {
     global $con;
     $stmt  = $con->prepare("INSERT INTO `notification`(  `notification_title`, `notification_body`, `notification_userid`) VALUES (? , ? , ?)");
     $stmt->execute(array($title, $body, $userid));
+    //be3ed me nsajel notif fl BD temchi Tab3ath e notif lel utilisateur
     sendGCM($title,  $body, $topic, $pageid, $pagename);
     $count = $stmt->rowCount();
     return $count;

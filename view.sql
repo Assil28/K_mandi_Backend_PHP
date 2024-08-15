@@ -21,7 +21,7 @@ GROUP BY cart.cart_itemsid , cart.cart_usersid , cart.cart_orders ;
 CREATE  or REPLACE view ordersview AS 
 SELECT orders.* , address.* FROM orders 
 LEFT JOIN address ON address.address_id = orders.orders_address ; 
-
+/* LEFT POUR DIRE QUE MEME LES ORDRES QUI NONT PAS D'ADRESSE*/
 
 CREATE or REPLACE VIEW ordersdetailsview  as 
 SELECT SUM(items.items_price - items.items_price * items_discount / 100) as itemsprice  , COUNT(cart.cart_itemsid) as countitems , cart.* , items.*   FROM cart 

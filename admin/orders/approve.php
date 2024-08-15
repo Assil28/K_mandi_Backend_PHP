@@ -16,6 +16,8 @@ $data = array(
 
 updateData("orders", $data, "orders_id = $orderid AND orders_status = 0");
 
+//send notification khw meghir me nsajelha fl BD
 // sendGCM("success" , "The Order Has been Approved" , "users$userid" , "none" , "refreshorderpending"); 
 
+// ba3ed me l admin ya3mel approuve l commande tsir ajouut l notif lel BD w tetba3th lel user (3malet appell lel sendGCM f west l insertNotify)
 insertNotify("success", "The Order Has been Approved", $userid, "users$userid", "none",  "refreshorderpending");
