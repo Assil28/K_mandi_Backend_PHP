@@ -2,7 +2,7 @@
 
 include "./connect.php";
 
- 
+ // les produit l 3lihom sold 
  
 
 $stmt = $con->prepare("SELECT items1view.* , 1 as favorite , (items_price - (items_price * items_discount / 100 ))  as itemspricedisount  FROM items1view 
