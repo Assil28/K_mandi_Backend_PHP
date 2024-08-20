@@ -30,6 +30,8 @@ WHERE cart_orders != 0
 GROUP BY cart.cart_itemsid , cart.cart_usersid , cart.cart_orders ;
 
 
+
+/* View pour items top Selling*/
 CREATE or REPLACE VIEW itemstopselling AS 
 SELECT COUNT(cart_id) as countitems , cart.* , items.*  , (items_price - (items_price * items_discount / 100 ))  as itemspricedisount  FROM cart 
 INNER JOIN items ON items.items_id = cart.cart_itemsid
