@@ -6,12 +6,12 @@ $alldata = array() ;
 
 $alldata['status'] = "success" ; 
 
+// Get Settings
 $settings = getAllData("settings" , "1 = 1" , null , false )  ;
-
 $alldata['settings'] = $settings ; 
 
+// getCategories
 $categories = getAllData("categories" , null , null , false )  ;
-
 $alldata['categories'] = $categories ; 
 
 // affiche les produits l top vendu 
